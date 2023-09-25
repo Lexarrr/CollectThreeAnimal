@@ -17,7 +17,8 @@ public class Main {
         System.out.println(bft + ": " + bft.getCount());
         bft.put(new Otter(10.5, "Motto"));
         System.out.println(bft + ": " + bft.getCount());
-
+        bft.sort();
+        System.out.println(bft + ": " + bft.getCount());
     }
 
     private static void ex1() {

@@ -8,6 +8,11 @@ public abstract class Animal {
         this.weight = weight;
     }
 
+    public Animal() {
+
+    }
+
+
     public double getWeight() {
         return weight;
     }

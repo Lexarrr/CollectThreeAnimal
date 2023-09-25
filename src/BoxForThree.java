@@ -1,9 +1,6 @@
 import Mammal.Animal;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 public class BoxForThree<E> {
 
@@ -12,10 +9,13 @@ public class BoxForThree<E> {
     E t;
 
 
+
+
     public BoxForThree() {
         f = null;
         s = null;
         t = null;
+
     }
 
     public int getCount() {
@@ -28,43 +28,59 @@ public class BoxForThree<E> {
         return 3;
 
 
-    }
 
-
-    public static int findMin(int[] Min) {
-        int mn = Min[0];
-        int i = 0;
-        while (i < Min.length) {
-            if (mn > Min[i]) {
-                mn = Min[i];
-            }
-            i++;
-        }
-        return mn;
-    }
-
-    public static int[] sortByMin(int[] mas) {
-        int mn = findMin(mas);
-        int rs = 0;
-        for (int i = 0; i < mas.length; i++) {
-            for (int j = 1; j < mas.length; j++) {
-                if (mas[j] < mn) {
-                    rs = mas[j];
-                    mas[i] = mas[j];
-                    mas[j] = rs;
-                }
-            }
-        }
-        return mas;
     }
 
     public void sort() {
-        E min = f;
-        int i = 0;
-        if (f > s){
+        if (getCount() == 2) {
+            if (f.hashCode() < s.hashCode()) {
+                makeComparator();
+                E temp = f;
+                f = s;
+                s = temp;
+            }
+            if (f.hashCode() < t.hashCode()) {
+                makeComparator();
+                E temp = f;
+                f = t;
+                t = temp;
+            }
 
         }
     }
+
+    public static <T extends Comparable<T>> Comparator<T> makeComparator() {
+        return new Comparator<T>() {
+            public int compare(T left, T right) {
+                return left.compareTo(right);
+            }
+        };
+    }
+//    <E extends Comparable<E>> void bubbleSort() {
+//        List<E> alist = new ArrayList<>();
+//        alist.add((E) f);
+//        alist.add((E) s);
+//        alist.add((E) t);
+//        int n = alist.size();
+//        for (int i = 0; i < n-1; i++){
+//            for (int j = 0; j < n-i-1; j++){
+//                if (alist.get(j).compareTo(alist.get(j + 1)) > 0) {
+//                    E temp = alist.get(j);
+//                    alist.set(j, alist.get(j + 1));
+//                    alist.set(j + 1, temp);
+//                }
+//            }
+//        }
+//    }
+
+    Animal animal = new Animal() {
+
+
+        @Override
+        public void toMove() {
+
+        }
+    };
 
     public void put(E one) {
         if (getCount() == 0)
@@ -74,6 +90,11 @@ public class BoxForThree<E> {
                 f = one;
             else
                 s = one;
+//            if(animal.getWeight() > animal.getWeight()) {
+//                E temp = f;
+//                f = s;
+//                s = temp;
+//            }
         else if (getCount() == 2)
             if (s == null)
                 s = one;
@@ -81,6 +102,8 @@ public class BoxForThree<E> {
                 t = one;
         else
             System.out.println("no");
+
+
     }
 
     @Override

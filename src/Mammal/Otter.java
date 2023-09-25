@@ -23,4 +23,12 @@ public class Otter extends Mammal implements Runner, Walker {
     public void toWalk() {
         System.out.println("Otter walks");
     }
+
+    @Override
+    public String toString() {
+        return "Otter{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }
