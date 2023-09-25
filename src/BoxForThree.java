@@ -1,14 +1,22 @@
 import Mammal.Animal;
 
-import java.util.Comparator;
-
 public class BoxForThree<E> {
 
     E f;
     E s;
     E t;
 
-
+//    Animal a = new Animal() {
+//        @Override
+//        public double getWeight() {
+//            return super.getWeight();
+//        }
+//
+//        @Override
+//        public void toMove() {
+//
+//        }
+//    };
 
 
     public BoxForThree() {
@@ -28,34 +36,28 @@ public class BoxForThree<E> {
         return 3;
 
 
-
     }
 
-    public void sort() {
-        if (getCount() == 2) {
-            if (f.hashCode() < s.hashCode()) {
-                makeComparator();
-                E temp = f;
-                f = s;
-                s = temp;
-            }
-            if (f.hashCode() < t.hashCode()) {
-                makeComparator();
-                E temp = f;
-                f = t;
-                t = temp;
-            }
 
-        }
-    }
+//    public void sort() {
+//        if (getCount() == 2) {
+//            if (f.hashCode() < s.hashCode()) {
+//                makeComparator();
+//                E temp = f;
+//                f = s;
+//                s = temp;
+//            }
+//            if (f.hashCode() < t.hashCode()) {
+//                makeComparator();
+//                E temp = f;
+//                f = t;
+//                t = temp;
+//            }
+//
+//        }
+//    }
 
-    public static <T extends Comparable<T>> Comparator<T> makeComparator() {
-        return new Comparator<T>() {
-            public int compare(T left, T right) {
-                return left.compareTo(right);
-            }
-        };
-    }
+
 //    <E extends Comparable<E>> void bubbleSort() {
 //        List<E> alist = new ArrayList<>();
 //        alist.add((E) f);
@@ -72,39 +74,43 @@ public class BoxForThree<E> {
 //            }
 //        }
 //    }
-
-    Animal animal = new Animal() {
-
-
-        @Override
-        public void toMove() {
-
-        }
-    };
+//    public int getW(double f, E s, E t){
+//       f = a.getWeight();
+//
+//
+//
+//
+//
+//    }
 
     public void put(E one) {
         if (getCount() == 0)
             f = one;
         else if (getCount() == 1)
-            if (f == null)
+            if (f == null) {
                 f = one;
+                E temp = f;
+                f = s;
+                s = temp;
+            }
             else
                 s = one;
-//            if(animal.getWeight() > animal.getWeight()) {
-//                E temp = f;
-//                f = s;
-//                s = temp;
+//            if(a[0].getWeight() > a.getWeight()) {
+//
 //            }
         else if (getCount() == 2)
-            if (s == null)
+            if (s == null) {
                 s = one;
+                E temp = s;
+                s = t;
+                t = temp;
+            }
             else
                 t = one;
         else
             System.out.println("no");
-
-
     }
+
 
     @Override
     public String toString() {
@@ -116,6 +122,24 @@ public class BoxForThree<E> {
     }
 
 
+//    @Override
+//    public int compareTo(E o) {
+//        if (> o.getWeight()) {
+//            return this.weight - o.getWeight();
+//        }
+//        return compareTo(getWeight());
+//    }
+
+
+
+//    public BoxForThree(E f, E s, E t) {
+//        this.f = f;
+//        this.s = s;
+//        this.t = t;
+//    }
+
+
 }
+
 
 

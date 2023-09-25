@@ -25,6 +25,8 @@ public class Deer extends Mammal implements Walker, Runner {
         System.out.println("Mammal.Deer runs");
     }
 
+
+
     @Override
     public String toString() {
         return "Deer{" +
@@ -32,4 +34,6 @@ public class Deer extends Mammal implements Walker, Runner {
                 ", weight=" + weight +
                 '}';
     }
+
+
 }
