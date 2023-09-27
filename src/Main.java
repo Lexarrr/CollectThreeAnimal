@@ -14,12 +14,14 @@ public class Main {
         ex3();
     }
 
-    private static void ex3() {
-        BoxForThree<Sloth> ba = new BoxForThree<Sloth>();
-        ba.compareTo(ba.put(new Sloth(20, "Sid"), new Sloth(15, "Git"), new Sloth(30, "Hit")));
-
-
-    }
+//    private static void ex3() {
+//        BoxForThree<Sloth> ba = new BoxForThree<Sloth>();
+//        ba.compareTo(ba.put(new Sloth(20, "Sid")),
+//                     ba.put(new Sloth(15, "Git")),
+//                     ba.put(new Sloth(30, "Hit")));
+//
+//
+//    }
 
     private static void ex2() {
         BoxForThree<Otter> bft = new BoxForThree<>();
