@@ -1,6 +1,7 @@
 import Mammal.Animal;
 import Mammal.Deer;
 import Mammal.Otter;
+import Mammal.Sloth;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -10,6 +11,14 @@ public class Main {
     public static void main(String[] args) {
         ex1();
         ex2();
+        ex3();
+    }
+
+    private static void ex3() {
+        BoxForThree<Sloth> ba = new BoxForThree<Sloth>();
+        ba.compareTo(ba.put(new Sloth(20, "Sid"), new Sloth(15, "Git"), new Sloth(30, "Hit")));
+
+
     }
 
     private static void ex2() {
