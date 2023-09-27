@@ -1,17 +1,12 @@
 package Mammal;
 
-public abstract class Animal {
+public abstract class Animal implements Comparable<Animal>{
 
     double weight;
 
     public Animal(double weight) {
         this.weight = weight;
     }
-
-    public Animal() {
-
-    }
-
 
     public double getWeight() {
         return weight;
@@ -28,4 +23,8 @@ public abstract class Animal {
     }
 
 
+    @Override
+    public int compareTo(Animal o) {
+        return Double.compare(this.weight, o.weight);
+    }
 }

@@ -5,6 +5,8 @@ import Mammal.Otter;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import static java.lang.StringUTF16.compareTo;
+
 public class Main {
     public static void main(String[] args) {
         ex1();
@@ -20,6 +22,7 @@ public class Main {
         System.out.println(bft + ": " + bft.getCount());
         bft.put(new Otter(10.5, "Motto"));
         System.out.println(bft + ": " + bft.getCount());
+
 
 //        Arrays.sort(bft, new Comparator<Otter>() {
 //            @Override

@@ -1,6 +1,6 @@
 import Mammal.Animal;
 
-public class BoxForThree<E> {
+public class BoxForThree<E> implements Comparable<E>{
 
     E f;
     E s;
@@ -89,9 +89,9 @@ public class BoxForThree<E> {
         else if (getCount() == 1)
             if (f == null) {
                 f = one;
-                E temp = f;
-                f = s;
-                s = temp;
+//                E temp = f;
+//                f = s;
+//                s = temp;
             }
             else
                 s = one;
@@ -101,14 +101,15 @@ public class BoxForThree<E> {
         else if (getCount() == 2)
             if (s == null) {
                 s = one;
-                E temp = s;
-                s = t;
-                t = temp;
+//                E temp = s;
+//                s = t;
+//                t = temp;
             }
             else
                 t = one;
         else
             System.out.println("no");
+
     }
 
 
@@ -119,6 +120,11 @@ public class BoxForThree<E> {
                 ", second=" + s +
                 ", third=" + t +
                 '}';
+    }
+
+    @Override
+    public int compareTo(E o) {
+        return compareTo(o);
     }
 
 
