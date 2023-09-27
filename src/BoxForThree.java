@@ -1,6 +1,6 @@
 import Mammal.Animal;
 
-public class BoxForThree<E> implements Comparable<E>{
+public class BoxForThree<E> /*extends Animal<E>/*implements Comparable<E>*/{
 
     E f;
     E s;
@@ -41,7 +41,7 @@ public class BoxForThree<E> implements Comparable<E>{
 
 //    public void sort() {
 //        if (getCount() == 2) {
-//            if (f.hashCode() < s.hashCode()) {
+//            if (f.g < s.hashCode()) {
 //                makeComparator();
 //                E temp = f;
 //                f = s;
