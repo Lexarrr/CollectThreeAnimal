@@ -6,6 +6,7 @@ import Mammal.Sloth;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedList;
 
 
 public class Main {
@@ -21,9 +22,20 @@ public class Main {
 //                     ba.put(new Sloth(15, "Git")),
 //                     ba.put(new Sloth(30, "Hit")));
 
+        Sloth sloth = new Sloth(20, "Sid", 8);
+        Sloth sloth1 = new Sloth(15, "Git", 1);
+        Sloth sloth2 = new Sloth(40, "Hit", 3);
 
-        ba.put(new Sloth(20, "Sid"));
 
+        LinkedList<Sloth> sll = new LinkedList<>();
+        sll.add(sloth);
+        sll.add(sloth1);
+        sll.add(sloth2);
+
+        sll.sort(((o1, o2) -> Double.compare(o1.getWeight(), o2.getWeight())));
+        System.out.println(sll);
+        sll.sort(((o1, o2) -> Double.compare(o1.getAge(), o2.getAge())));
+        System.out.println(sll);
 
     }
 

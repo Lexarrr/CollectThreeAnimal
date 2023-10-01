@@ -122,10 +122,10 @@ public class BoxForThree<E> /*extends Animal<E>/*implements Comparable<E>*/{
                 '}';
     }
 
-    @Override
-    public int compareTo(E o) {
-        return compareTo(o);
-    }
+//    @Override
+//    public int compareTo(E o) {
+//        return compareTo(o);
+//    }
 
 
 //    @Override
